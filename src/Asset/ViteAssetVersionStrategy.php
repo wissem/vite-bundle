@@ -52,12 +52,12 @@ class ViteAssetVersionStrategy implements VersionStrategyInterface
      * versioned file. as it contains a hashed and different path
      * with each new config, this is enough for us.
      */
-    public function getVersion(string $path): string
+    public function getVersion($path)
     {
         return $this->applyVersion($path);
     }
 
-    public function applyVersion(string $path): string
+    public function applyVersion($path)
     {
         return $this->getassetsPath($path) ?: $path;
     }
